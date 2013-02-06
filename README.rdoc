@@ -2,10 +2,6 @@
   _| (   |   / ____| .  |  _|   \ \ /  _|     /     _ \   |     (   | .  |  _|  
  _| \___/ _|_\      _|\_| ___|   \_/  ___| _|_\   _/  _\ ____| \___/ _|\_| ___| 
                                                                                 
-* Change log 6th, Jan 2013
-  - login/logout with username
-  - redirect to welcome page
-	
 * Change log 4th, Jan 2013
   - update bootstrap
   - Create Thang's branch

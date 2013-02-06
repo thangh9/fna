@@ -6,8 +6,6 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-			session[:user_id] = @user.id
-			#redirect to user page, change it later
 			redirect_to @user, notice: "You're Lonely no more!"
 		else
 			render 'new'

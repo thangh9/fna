@@ -1,12 +1,4 @@
 Fna::Application.routes.draw do
-  devise_for :users
-
-  get "pages/welcome"
-
-  get "sessions/new"
-  post "sessions/create"
-  get "sessions/destroy"
-
   resources :users
 
   # root to new user
