@@ -2,18 +2,11 @@
   _| (   |   / ____| .  |  _|   \ \ /  _|     /     _ \   |     (   | .  |  _|  
  _| \___/ _|_\      _|\_| ___|   \_/  ___| _|_\   _/  _\ ____| \___/ _|\_| ___| 
                                                                                 
+* Change log 6th, Jan 2013
+	- login/logout with username
+	
 * Change log 4th, Jan 2013
   - update bootstrap
   - Create Thang's branch
   - create db Users
   - create Signup function
-
-  * Requirement
-   - Signup:
-    + user enter email + password (1 time)
-    + user have to confirm email
-    + after signup (1st login): require upload image + redirect to welcome page
-    + login with fb, g+
-  - welcome page
-    + upload image, avatar at first time
-    + 
