@@ -1,4 +1,4 @@
-<h1>For-Never Alone?</h1>
+<div class="span4 offset1 reg">
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <ul>
@@ -11,5 +11,6 @@
     <%= f.text_field :username, placeholder: "username" %>
     <%= f.password_field :password, placeholder: "password" %>
     <%= f.password_field :password_confirmation, placeholder: "password" %>
-    <%= f.submit "Create Account" %>
+    <%= f.submit "Create Account", :class => 'btn' %>
   <% end %>
+</div>

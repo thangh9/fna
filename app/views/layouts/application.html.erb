@@ -2,25 +2,57 @@
 <html>
 <head>
   <title>For-Never Alone Project</title>
-  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/custom.css" rel="stylesheet" type="text/css" media="all">
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<!-- login/logout form -->
-	<% if current_user %>
-    <%= link_to "Log Out", sessions_destroy_path %>
-	<% else %>
-	    <%= form_tag sessions_create_path do %>
-	        <%= text_field_tag :username, nil, placeholder: "username" %>
-	        <%= password_field_tag :password, nil,  placeholder: "password" %>
-	        <%= submit_tag "Log In" %>
-	    <% end %>
-	<% end %>
-<%= yield %>
+	<div class="container-narrow">
+		<div class="row-fluid">
+			<div class="span12">
+			<!-- login/logout form -->
+			<!-- Button to trigger modal -->
+				<a href="#myModal" role="button" class="btn offset10" data-toggle="modal">Login/Logout</a>
+				 
+				<!-- Modal -->
+				<div id="myModal" class="modal hide fade span4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					    <h3 id="myModalLabel">F.A no more...</h3>
+					  </div>
+				  <% if current_user %>
+				    <%= link_to "Log Out", sessions_destroy_path, :class => 'btn' %>
+					<% else %>
+					    <%= form_tag sessions_create_path do %>
+					        <%= text_field_tag :username, nil, placeholder: "username" %>
+					        <%= password_field_tag :password, nil,  placeholder: "password" %>
+					        <%= submit_tag "Log In", :class => 'btn' %>
+					    <% end %>
+					<% end %>
+				</div>
+			
+			<!-- end login form -->
+			<div class="containerTopbar">
+				<div class="span6">
+					<h1>For Never Alone</h1>
+				</div>	
+				<div class="span3">
+					<h5>Alone or Not Alone...</h5>
+				</div>
+				<div class="span3">
+					<img src="/img/logo.png" width=70>
+				</div>
+			</div>
 
+			
+				<%= yield %>
+			
+			</div>
+		</div>
+	</div>
 	<!-- javascript -->
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
