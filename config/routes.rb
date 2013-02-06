@@ -1,4 +1,11 @@
 Fna::Application.routes.draw do
+  get "pages/welcome"
+
+  # for login sessions
+  get "sessions/new"
+  post "sessions/create"
+  get "sessions/destroy"
+
   resources :users
 
   # root to new user

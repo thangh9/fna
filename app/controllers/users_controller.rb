@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-			redirect_to @user, notice: "You're Lonely no more!"
+			#redirect after login
+			redirect_to pages_welcome_url, notice: "You're Lonely no more!"
 		else
 			render 'new'
 		end
