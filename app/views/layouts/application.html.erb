@@ -2,9 +2,6 @@
 <html>
 <head>
   <title>For-Never Alone Project</title>
-  	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/custom.css" rel="stylesheet" type="text/css" media="all">
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,25 +11,26 @@
 		<div class="row-fluid">
 			<div class="span12">
 			<!-- login/logout form -->
-			<!-- Button to trigger modal -->
-				<a href="#myModal" role="button" class="btn offset10" data-toggle="modal">Login/Logout</a>
-				 
-				<!-- Modal -->
-				<div id="myModal" class="modal hide fade span4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-header">
-					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					    <h3 id="myModalLabel">F.A no more...</h3>
-					  </div>
+				
 				  <% if current_user %>
-				    <%= link_to "Log Out", sessions_destroy_path, :class => 'btn' %>
+				    <%= link_to "Log Out", sessions_destroy_path, :class => 'btn offset10' %>
 					<% else %>
+						<!-- Button to trigger modal -->
+						<a href="#myModal" role="button" class="btn offset10" data-toggle="modal">Login</a>
+						<!-- Modal -->
+						<div id="myModal" class="modal hide fade span4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							    <h3 id="myModalLabel">F.A no more...</h3>
+							</div>
 					    <%= form_tag sessions_create_path do %>
 					        <%= text_field_tag :username, nil, placeholder: "username" %>
 					        <%= password_field_tag :password, nil,  placeholder: "password" %>
 					        <%= submit_tag "Log In", :class => 'btn' %>
+					        </div>
 					    <% end %>
 					<% end %>
-				</div>
+				
 			
 			<!-- end login form -->
 			<div class="containerTopbar">
