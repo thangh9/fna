@@ -1,0 +1,58 @@
+/*custom css for-never alone project*/
+body {
+	background: url(/img/header.jpg)
+}
+
+.container-narrow {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.containerTopbar {
+	background-color: #db3939;
+	height: 80px;
+	margin: 4px 0 0;
+	overflow: hidden;
+	position: relative;
+	padding: 10px 0 0 0;
+	z-index: 10;
+}
+
+.containerTopbar h1 {
+	font-size: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: -1px;
+	padding: 15px;
+}
+
+.containerTopbar h5 {
+	font-size: 19px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+
+.reg {
+	margin: 28px 0 10px 14px;
+	border: 10px solid #feeac3;
+	background-color: #fcf8e3;
+	height: 380px;
+	padding: 6px;
+} 
+
+/* login popup */
+.modal {
+	background: white;
+	display: none;
+	top: 100px;
+	left: 50%;
+	margin-left: -260px;
+	width: 520px;
+	position: absolute;
+	padding: 30px;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
