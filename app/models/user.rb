@@ -13,5 +13,5 @@ class User < ActiveRecord::Base
                        :length => {:within => 6..40},
                        :allow_blank => false,
                        :on => :update
-  attr_accessible :email, :password, :password_confirmation, :username
+  attr_accessible :email, :password, :password_confirmation, :username, :gender
 end

@@ -2,6 +2,9 @@
   _| (   |   / ____| .  |  _|   \ \ /  _|     /     _ \   |     (   | .  |  _|  
  _| \___/ _|_\      _|\_| ___|   \_/  ___| _|_\   _/  _\ ____| \___/ _|\_| ___| 
                                                                                 
+* Change log 9th Fer 2013:
+  - add gender to reg
+
 * Change log 7th Fer 2013:
   - move css file to asset
   - custom login/logout button
