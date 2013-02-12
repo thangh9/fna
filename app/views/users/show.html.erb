@@ -1,3 +1,18 @@
 <%= @user.username %> |
 <%= @user.email %> |
-<%= @user.gender %>
+<%= @user.gender %> |
+<%= @user.followers.count %> |
+<%= @user.followeds.count %>
+<br />
+<% if current_user and @user != current_user %>
+    <% if current_user.following? @user %>
+        <%= form_tag relationship_path, method: :delete do %>
+            <%= submit_tag "Unfollow" %>
+        <% end %>
+    <% else %>
+        <%= form_for @relationship do %>
+            <%= hidden_field_tag :followed_id, @user.id %>
+            <%= submit_tag "Follow" %>
+        <% end %>
+    <% end %>
+<% end %>

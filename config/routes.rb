@@ -1,4 +1,6 @@
 Fna::Application.routes.draw do
+  resources :relationships
+
   get "pages/welcome"
 
   # for login sessions
